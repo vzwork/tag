@@ -6,6 +6,7 @@ import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,10 +61,12 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
+      // className={cn(inter.className, " dark:text-slate-400")}
       >
         <ThemeSwitcher />
-        <div className="min-h-screen">{children}</div>
+        <AuthProvider>
+          <div className="min-h-screen">{children}</div>
+        </AuthProvider>
         <Footer />
       </body>
     </html>

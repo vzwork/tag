@@ -6,7 +6,11 @@ import com.tag.demo.data.UserDto;
 
 public interface UserService {
 
-    void createUser(UserDto userDto);
+    UserDto createUser(UserDto userDto);
+
+    UserDto signIn(UserDto userIn);
+
+    UserDto updateUser(UserDto userIn);
 
     List<UserDto> getUsers();
 

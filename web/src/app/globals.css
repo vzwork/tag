@@ -4,3 +4,29 @@
 @tailwind utilities;
 
 @plugin "daisyui";
+
+[data-mode="light"] body {
+    /* box-shadow: 0 0 50px 10px yellow; */
+    background-color: #ccc !important;
+    color: #000;
+    /* border: 1px solid orangered; */
+}
+
+
+[data-mode="dark"] body {
+    /* box-shadow: 0 0 50px 10px yellow; */
+    background-color: #000;
+    color: #ccc;
+    /* border: 1px solid orangered; */
+}
+
+[data-mode="system"] body {
+    /* box-shadow: 0 0 50px 10px yellow; */
+    background-color: #ccc !important;
+    color: #000;
+    /* border: 1px solid orangered; */
+}
+
+* {
+    background-color: transparent !important;
+}
